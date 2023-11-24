@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Prompt&display=swap');
+
+#body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(62, 216, 222);
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: Prompt;
+}
+
+h2 {
+    text-align: center;
+    font-family: Prompt;
+}
+
+p {
+    width: 70%;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Dosis;
+}
+
+ion-card-title {
+    font-size: 25px;
+    font-family: Prompt;
+}
+
+ion-card-subtitle {
+    font-size: 20px;
+    font-family: Dosis;
+}
+                              
+ion-icon {
+    width: 56px;
+    height: 56px;
+}
+
+ion-item > ion-label > ion-img {
+    width: 120px;
+    margin: 30px auto;
+}
+
+ion-item > ion-label h3 {
+    font-size: 20px;
+    font-family: Prompt;
+}
+
+ion-item > ion-label p {
+    width: 90%;
+    font-size: 15px;
+    font-family: Dosis;
+}
+
+ion-item > ion-label > ion-button {
+    font-size: 18px;
+}
+
+.custom-hover:hover {
+    --background:#050606; /* Cambia el color de fondo al hacer hover */
+    --color:rgb(25, 105, 123);
+}
+
+ion-list > ion-item > ion-icon {
+    width: 24px;
+    margin-right: 20px;
+}
+
+ion-item > ion-label{
+    font-size: 20px;
+    font-family: Dosis;
+}
+
+.custom:hover {
+    --background:#050606; /* Cambia el color de fondo al hacer hover */
+    --color:rgb(25, 105, 123);
+}
+  
+ion-popover {
+    --background: rgba(40, 218, 73, 0.6);
+    --backdrop-opacity: 0.6;
+    --box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+    --color: rgb(12, 11, 11);
+    --width: 300px;
+  }
+  
+  ion-popover ion-content {
+    --background:rgba(107, 242, 132, 0.6);
+    --color: rgb(12, 11, 11);
+    font-weight: bold;
+    font-family: Dosis;
+  }
+  
+  ion-popover::part(backdrop) {
+    background-color: rgb(28, 28, 31);
+  }
+
+  ion-progress-bar::part(track) {
+    background: #f3e895;
+  }
+  
+  ion-progress-bar::part(progress) {
+    background: #09c567;
+  }
+  

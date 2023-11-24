@@ -1,17 +1,207 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<div class="ion-page" id="main-content">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
+      <ion-grid>
+        <ion-row class="ion-justify-content-start">
+          <ion-col size="auto">
+            <ion-avatar>
+              <ion-img class="ion-float-left"
+                src="https://res.cloudinary.com/dhxu7loe5/image/upload/v1700620421/foto_vqlitz.jpg" alt="Me"></ion-img>
+            </ion-avatar>
+          </ion-col>
+          <ion-col size="auto">
+            <ion-title>
+              <h2 class="ion-float-left">Estela Chipantasi</h2>
+            </ion-title>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-toolbar>
   </ion-header>
+  <ion-content class="ion-padding">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles"
+        refreshingText="Refrescando...">
+      </ion-refresher-content>
+    </ion-refresher>
+
+    <div id="body">
+      <h1>Bienvenido!</h1>
+      <p>
+        Soy estudiante de desarrollo de software
+        me considero una persona empática, llena de optimismo con una
+        buena actitud ante las dificultades y disposición para
+        trabajar en equipo.
+      </p>
+    </div>
+
+
+    <ion-grid>
+      <h2>TECNOLOGÍAS Y HERRAMIENTAS</h2>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <ion-card class="custom-hover">
+            <ion-card-header>
+              <ion-icon name="logo-python"></ion-icon>
+              <ion-card-title>Python</ion-card-title>
+              <ion-card-subtitle>Intermedio</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card class="custom-hover">
+            <ion-card-header>
+              <ion-icon name="logo-css3"></ion-icon>
+              <ion-card-title>CSS3</ion-card-title>
+              <ion-card-subtitle>Intermedio</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+
+        </ion-col>
+
+        <ion-col>
+          <ion-card class="custom-hover">
+            <ion-card-header>
+              <ion-icon name="logo-html5"></ion-icon>
+              <ion-card-title>HTML5</ion-card-title>
+              <ion-card-subtitle>Intermedio</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card class="custom-hover">
+            <ion-card-header>
+              <ion-icon name="logo-nodejs"></ion-icon>
+              <ion-card-title>JavaScript</ion-card-title>
+              <ion-card-subtitle>Básico</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="auto">
+          <h2>FORMACION</h2>
+          <ion-item>
+            <ion-label class="ion-text-center">
+              <ion-img src="https://res.cloudinary.com/dhxu7loe5/image/upload/v1700622868/poli_lqlirs.webp"
+                alt="Escuela Politecnica Nacional"></ion-img>
+              <h3>Tecnóloga en Desarrollo de Software</h3>
+              <p>11 Nov - Actualidad</p>
+            </ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-label class="ion-text-center">
+              <h3>Curso de CSS</h3>
+              <ion-button (click)="mostrarConfirmacion()" fill="outline">
+                Ver
+              </ion-button>
+              <!-- <ion-alert trigger="present-alert" header="Alert!" [buttons]="alertButtons"
+                (didDismiss)="setResult($event)"></ion-alert>-->
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <h2>HABILIDADES</h2>
+          <ion-list>
+            <ion-item id="trigger-button" class="custom">
+              <ion-icon name="construct-outline"></ion-icon>
+              <ion-label class="ion-text-start">Trabajar en equipo</ion-label>
+            </ion-item>
+            <ion-popover trigger="trigger-button">
+              <ng-template>
+                <ion-content class="ion-padding">Coordinación fluida, comunicación abierta y contribuciones
+                  colaborativas: un buen trabajo en equipo maximiza el potencial de cada miembro.</ion-content>
+              </ng-template>
+            </ion-popover>
+
+            <ion-item id="trigger-button-2" class="custom">
+              <ion-icon name="sparkles-outline"></ion-icon>
+              <ion-label class="ion-text-start">Creatividad</ion-label>
+            </ion-item>
+            <ion-popover trigger="trigger-button-2">
+              <ng-template>
+                <ion-content class="ion-padding">Innovadora y visionaria, transformo ideas en soluciones con
+                  imaginación.</ion-content>
+              </ng-template>
+            </ion-popover>
+
+            <ion-item id="trigger-button-3" class="custom">
+              <ion-icon name="happy-outline"></ion-icon>
+              <ion-label class="ion-text-start">Flexibilidad</ion-label>
+            </ion-item>
+            <ion-popover trigger="trigger-button-3">
+              <ng-template>
+                <ion-content class="ion-padding">Adaptable y abierta a cambios, muestro versatilidad y facilidad para
+                  ajustarme a diversas situaciones con actitud positiva.</ion-content>
+              </ng-template>
+            </ion-popover>
+
+          </ion-list>
+        </ion-col>
+        <ion-col>
+          <h2>IDIOMAS</h2>
+          <ion-item id="trigger-button-3" class="custom">
+            <ion-label class="ion-text-start">Inglés</ion-label>
+          </ion-item>
+          <ion-progress-bar value=".25" buffer=".5"></ion-progress-bar>
+          <ion-item id="trigger-button-3" class="custom">
+            <ion-label class="ion-text-start">Español</ion-label>
+          </ion-item>
+          <ion-progress-bar value=".99" buffer=".5"></ion-progress-bar>
+        </ion-col>
+        <ion-col>
+          <h2>INTERESES</h2>
+          <ion-row>
+            <ion-chip color="success">Lectura</ion-chip>
+          </ion-row>
+
+          <ion-row>
+            <ion-chip color="danger">Cocina</ion-chip>
+          </ion-row>
+
+          <ion-row>
+            <ion-chip color="warning">Arte</ion-chip>
+          </ion-row>
+
+          <ion-row>
+            <ion-chip color="primary">Armar rompecabezas</ion-chip>
+          </ion-row>
+
+          <ion-row>
+            <ion-chip color="medium">Música</ion-chip>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+
+      <h2>CONTACTOS</h2>
+      <ion-row class="ion-justify-content-center">
+        <ion-col>
+          <ion-chip color="primary">
+            <ion-button fill="clear" href="http://www.linkedin.com/in/estelachipantasi"><ion-icon
+                name="logo-linkedin"></ion-icon></ion-button>
+          </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip color="secondary">
+            <ion-button fill="clear" href="https://github.com/EstelaIb"><ion-icon
+                name="logo-github"></ion-icon></ion-button>
+          </ion-chip>
+        </ion-col>
+        <ion-col>
+          <ion-chip color="tertiary">
+            <ion-button fill="clear" href="https://wa.link/oup0ks"><ion-icon
+                name="logo-whatsapp"></ion-icon></ion-button>
+          </ion-chip>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-content>
+</div>

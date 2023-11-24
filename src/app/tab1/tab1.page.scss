@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+ion-content {
+    font-family: 'Roboto Mono', monospace;
+}
+
+ion-image{
+    height: 100px;
+    width: 90%;
+}
+
+
+.custom-hover:hover {
+    --background:#2d3131; /* Cambia el color de fondo al hacer hover */
+    --color:rgb(234, 12, 12)
+}
+
+.size-icon {
+    width: 50px;
+    height: 50px;
+}
+
+
+ion-popover {
+    --background: rgba(255, 61, 61, 1);
+    --backdrop-opacity: 0.6;
+    --box-shadow: 0 5px 10px 0 rgba(7, 7, 7, 0.6);
+    --color: rgb(12, 11, 11);
+    --width: 300px;
+}
+
+ion-popover ion-content {
+--background: rgba(255, 61, 61, 1);
+--color: rgb(12, 11, 11);
+font-weight: bold;
+font-family: 'Roboto Mono', monospace;
+}
+
+ion-popover::part(backdrop) {
+background-color: rgb(28, 28, 31);
+}
