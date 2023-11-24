@@ -12,4 +12,4 @@ Esta aplicación tiene como funcionalidad principal tomar fotografías y mostrar
  <img src="assets/Gallery.jpg" width="400">
  <img src="assets/Estela-CV.jpg" width="400">
  <img src="assets/Edison-CV.jpg" width="400">
-<p>
+<p
